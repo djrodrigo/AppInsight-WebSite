@@ -1,0 +1,311 @@
+@use '../index.scss' as *;
+
+.mockup {
+  perspective: 1200px;
+}
+
+.window {
+  background: $color-dark-secondary;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-2xl;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  transform: rotateX(2deg);
+
+  @media (max-width: 768px) {
+    border-radius: $border-radius-lg;
+  }
+}
+
+.header {
+  border-bottom: 1px solid $color-border;
+}
+
+.titleBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md $spacing-lg;
+  background: $color-dark-tertiary;
+  user-select: none;
+}
+
+.buttons {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &.red {
+    background: #ff5f56;
+  }
+
+  &.yellow {
+    background: #ffbd2e;
+  }
+
+  &.green {
+    background: #27c93f;
+  }
+}
+
+.title {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  flex: 1;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  height: 500px;
+  background: $color-dark;
+
+  @media (max-width: 768px) {
+    height: 400px;
+  }
+}
+
+.sidebar {
+  width: 240px;
+  border-right: 1px solid $color-border;
+  padding: $spacing-lg;
+  background: $color-dark-secondary;
+  overflow-y: auto;
+
+  @media (max-width: 1024px) {
+    width: 200px;
+  }
+
+  @media (max-width: 768px) {
+    width: 160px;
+    padding: $spacing-md;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-2xl;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-md;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+  border-radius: $border-radius-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-md;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-md;
+  border-radius: $border-radius-md;
+  color: $color-text-secondary;
+  text-decoration: none;
+  font-size: $font-size-sm;
+  transition: all $transition-fast;
+
+  &:hover {
+    background: $color-dark-tertiary;
+    color: $color-primary;
+  }
+
+  &.active {
+    background: $color-dark-tertiary;
+    color: $color-primary;
+  }
+}
+
+.main {
+  flex: 1;
+  padding: $spacing-xl;
+  overflow-y: auto;
+
+  @media (max-width: 768px) {
+    padding: $spacing-lg;
+  }
+}
+
+.header_ {
+  margin-bottom: $spacing-2xl;
+
+  h2 {
+    margin-bottom: $spacing-lg;
+    font-size: $font-size-2xl;
+  }
+}
+
+.stats {
+  display: flex;
+  gap: $spacing-lg;
+
+  @media (max-width: 768px) {
+    gap: $spacing-md;
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.statValue {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+}
+
+.statLabel {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-md;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: $color-dark-secondary;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-lg;
+  padding: $spacing-lg;
+
+  &Full {
+    grid-column: 1 / -1;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-lg;
+
+  h3 {
+    font-size: $font-size-md;
+    margin: 0;
+  }
+}
+
+.badge {
+  padding: $spacing-xs $spacing-md;
+  border-radius: $border-radius-sm;
+  font-size: 10px;
+  font-weight: $font-weight-bold;
+
+  &Green {
+    background: rgba($color-accent-success, 0.15);
+    color: $color-accent-success;
+  }
+}
+
+.healthStatus {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.healthItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  font-size: $font-size-sm;
+}
+
+.healthCircle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  &.up {
+    background: $color-accent-success;
+  }
+}
+
+.metrics {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.metricLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+}
+
+.value {
+  color: $color-primary;
+}
+
+.progressBar {
+  height: 6px;
+  background: $color-dark-tertiary;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, $color-primary 0%, $color-primary-light 100%);
+  transition: width $transition-base;
+}
+
+.poolStatus {
+  display: flex;
+  gap: $spacing-lg;
+}
+
+.poolItem {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+  font-size: $font-size-sm;
+}
+
+.poolValue {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+}
+
+.chart {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,234 @@
+@use '../../index.scss' as *;
+
+.hikari {
+  background: linear-gradient(180deg, $color-dark-secondary 0%, $color-dark 100%);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $spacing-3xl;
+
+  h2 {
+    margin-bottom: $spacing-md;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    max-width: 600px;
+    margin: 0 auto;
+    color: $color-text-secondary;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-3xl;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    gap: $spacing-2xl;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.visualization {
+  background: $color-dark-secondary;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-xl;
+  padding: $spacing-2xl;
+}
+
+.poolVisualization {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2xl;
+}
+
+.connectionPool {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}
+
+.poolHeader {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.poolConnections {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: $spacing-sm;
+}
+
+.connection {
+  aspect-ratio: 1;
+  border-radius: $border-radius-sm;
+  border: 1px solid $color-border;
+  transition: all $transition-base;
+
+  &.active {
+    background: linear-gradient(135deg, $color-accent-success 0%, #00a366 100%);
+    border-color: $color-accent-success;
+    box-shadow: 0 0 8px rgba($color-accent-success, 0.5);
+  }
+
+  &.idle {
+    background: linear-gradient(135deg, #666666 0%, #4d4d4d 100%);
+    border-color: #666666;
+  }
+
+  &.empty {
+    background: transparent;
+    border-color: $color-border;
+  }
+}
+
+.poolStats {
+  display: flex;
+  gap: $spacing-lg;
+  padding-top: $spacing-lg;
+  border-top: 1px solid $color-border;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  &.active {
+    background: $color-accent-success;
+  }
+
+  &.idle {
+    background: #999999;
+  }
+
+  &.empty {
+    background: transparent;
+    border: 1px solid $color-border;
+  }
+}
+
+.chart {
+  padding: $spacing-lg;
+  background: $color-dark-tertiary;
+  border-radius: $border-radius-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.chartTitle {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $color-text-secondary;
+}
+
+.legend {
+  display: flex;
+  gap: $spacing-lg;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+}
+
+.color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+
+  &Orange {
+    background: $color-accent-warning;
+  }
+
+  &Green {
+    background: $color-accent-success;
+  }
+}
+
+.metrics {
+  h3 {
+    margin-bottom: $spacing-lg;
+    font-size: $font-size-2xl;
+  }
+}
+
+.metricsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  margin-bottom: $spacing-2xl;
+}
+
+.metricItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-md $spacing-lg;
+  background: $color-dark-secondary;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-lg;
+  color: $color-text-secondary;
+  transition: all $transition-base;
+
+  svg {
+    color: $color-primary;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    border-color: $color-primary;
+    background: $color-dark-tertiary;
+  }
+}
+
+.benefits {
+  padding-top: $spacing-xl;
+  border-top: 1px solid $color-border;
+
+  h4 {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-md;
+  }
+}
+
+.benefitsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  li {
+    padding-left: $spacing-lg;
+    position: relative;
+    color: $color-text-secondary;
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: $color-accent-success;
+      font-weight: bold;
+    }
+  }
+}

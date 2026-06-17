@@ -1,0 +1,115 @@
+@use '../index.scss' as *;
+
+.footer {
+  background: $color-dark-secondary;
+  border-top: 1px solid $color-border;
+  padding: $spacing-4xl 0 $spacing-2xl;
+
+  @media (max-width: 768px) {
+    padding: $spacing-3xl 0 $spacing-2xl;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: $spacing-4xl;
+  margin-bottom: $spacing-3xl;
+  padding-bottom: $spacing-3xl;
+  border-bottom: 1px solid $color-border;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: $spacing-2xl;
+  }
+}
+
+.brand {
+  h3 {
+    font-size: $font-size-2xl;
+    margin-bottom: $spacing-md;
+    background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  p {
+    color: $color-text-secondary;
+    margin-bottom: $spacing-lg;
+  }
+}
+
+.social {
+  display: flex;
+  gap: $spacing-lg;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $border-radius-lg;
+  background: $color-dark-tertiary;
+  color: $color-text-secondary;
+  transition: all $transition-base;
+
+  &:hover {
+    background: $color-primary;
+    color: white;
+    transform: translateY(-2px);
+  }
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-2xl;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-xl;
+  }
+}
+
+.column {
+  h4 {
+    font-size: $font-size-md;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-lg;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  a {
+    color: $color-text-secondary;
+    transition: color $transition-base;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.bottom {
+  text-align: center;
+  padding-top: $spacing-xl;
+
+  p {
+    font-size: $font-size-sm;
+    color: $color-text-tertiary;
+    margin: 0 0 $spacing-sm 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

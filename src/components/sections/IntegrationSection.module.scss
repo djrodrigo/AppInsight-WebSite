@@ -1,0 +1,134 @@
+@use '../../index.scss' as *;
+
+.integration {
+  background: linear-gradient(180deg, $color-dark 0%, $color-dark-secondary 100%);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $spacing-3xl;
+
+  h2 {
+    margin-bottom: $spacing-md;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    max-width: 600px;
+    margin: 0 auto;
+    color: $color-text-secondary;
+  }
+}
+
+.architecture {
+  margin-bottom: $spacing-3xl;
+  background: $color-dark-secondary;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-xl;
+  padding: $spacing-2xl;
+}
+
+.flow {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    gap: $spacing-md;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.block {
+  background: $color-dark-tertiary;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-lg;
+  padding: $spacing-lg;
+  min-width: 140px;
+  text-align: center;
+  transition: all $transition-base;
+
+  h4 {
+    margin: 0 0 $spacing-sm 0;
+    font-size: $font-size-md;
+  }
+
+  &Highlight {
+    border-color: $color-primary;
+    background: linear-gradient(135deg, $color-dark-tertiary 0%, rgba($color-primary, 0.1) 100%);
+    box-shadow: 0 4px 16px rgba($color-primary, 0.2);
+  }
+}
+
+.blockDesc {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  margin: 0;
+}
+
+.arrow {
+  color: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    transform: rotate(90deg);
+  }
+}
+
+.endpointsSection {
+  h3 {
+    text-align: center;
+    margin-bottom: $spacing-2xl;
+    font-size: $font-size-2xl;
+  }
+}
+
+.endpointsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-lg;
+  margin-bottom: $spacing-2xl;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.endpoint {
+  background: $color-dark-secondary;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-lg;
+  padding: $spacing-md;
+  text-align: center;
+  transition: all $transition-base;
+
+  code {
+    font-family: 'Monaco', 'Courier New', monospace;
+    font-size: $font-size-sm;
+    color: $color-primary;
+    word-break: break-all;
+  }
+
+  &:hover {
+    border-color: $color-primary;
+    background: $color-dark-tertiary;
+  }
+}
+
+.note {
+  text-align: center;
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+  font-style: italic;
+}

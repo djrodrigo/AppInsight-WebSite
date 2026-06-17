@@ -1,0 +1,84 @@
+@use '../../index.scss' as *;
+
+.finalCTA {
+  background: linear-gradient(180deg, $color-dark 0%, $color-dark-secondary 100%);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  h2 {
+    margin-bottom: $spacing-lg;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(135deg, #ffffff 0%, $color-text-secondary 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $spacing-2xl;
+    color: $color-text-secondary;
+  }
+}
+
+.ctas {
+  display: flex;
+  gap: $spacing-lg;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: $spacing-2xl;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.subtext {
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+  margin: 0;
+  margin-bottom: 0 !important;
+}
+
+.bgElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+
+  &1 {
+    width: 500px;
+    height: 500px;
+    background: rgba($color-primary, 0.25);
+    top: -150px;
+    right: -100px;
+  }
+
+  &2 {
+    width: 400px;
+    height: 400px;
+    background: rgba($color-primary, 0.15);
+    bottom: -100px;
+    left: -50px;
+  }
+}

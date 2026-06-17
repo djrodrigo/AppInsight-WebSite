@@ -1,0 +1,89 @@
+@use '../../index.scss' as *;
+
+.benefits {
+  background: linear-gradient(180deg, $color-dark 0%, $color-dark-secondary 100%);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $spacing-3xl;
+
+  h2 {
+    margin-bottom: $spacing-md;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    max-width: 600px;
+    margin: 0 auto;
+    color: $color-text-secondary;
+  }
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-2xl;
+  margin-bottom: $spacing-3xl;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.statCard {
+  background: $color-dark-secondary;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-xl;
+  padding: $spacing-2xl;
+  text-align: center;
+  transition: all $transition-base;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  &:hover {
+    border-color: $color-primary;
+    background: $color-dark-tertiary;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba($color-primary, 0.15);
+  }
+
+  h3 {
+    margin: 0;
+    font-size: $font-size-lg;
+  }
+
+  p {
+    margin: 0;
+    font-size: $font-size-md;
+    color: $color-text-secondary;
+  }
+}
+
+.statNumber {
+  font-size: $font-size-5xl;
+  font-weight: $font-weight-bold;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta {
+  text-align: center;
+  padding: $spacing-2xl;
+  background: linear-gradient(135deg, rgba($color-primary, 0.1) 0%, rgba($color-primary, 0.05) 100%);
+  border: 1px solid rgba($color-primary, 0.2);
+  border-radius: $border-radius-xl;
+
+  p {
+    font-size: $font-size-lg;
+    color: $color-text-secondary;
+    margin: 0;
+  }
+}

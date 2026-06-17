@@ -1,0 +1,239 @@
+@use '../../index.scss' as *;
+
+.screenshots {
+  background: linear-gradient(180deg, $color-dark 0%, $color-dark-secondary 100%);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $spacing-3xl;
+
+  h2 {
+    margin-bottom: $spacing-md;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    max-width: 600px;
+    margin: 0 auto;
+    color: $color-text-secondary;
+  }
+}
+
+.carousel {
+  background: $color-dark-secondary;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-2xl;
+  padding: $spacing-3xl;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: $spacing-2xl;
+  }
+}
+
+.slide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-3xl;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    gap: $spacing-2xl;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: $spacing-2xl;
+  }
+}
+
+.slideImage {
+  min-height: 300px;
+  border: 2px solid;
+  border-radius: $border-radius-xl;
+  padding: $spacing-lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    min-height: 250px;
+  }
+}
+
+.mockupContent {
+  width: 100%;
+}
+
+.mockupHeader {
+  padding-bottom: $spacing-lg;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: $spacing-lg;
+
+  h3 {
+    margin: 0;
+    font-size: $font-size-md;
+  }
+}
+
+.mockupBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+}
+
+.dashboardPreview {
+  display: flex;
+  gap: $spacing-2xl;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.stat {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  opacity: 0.8;
+}
+
+.graphPreview {
+  width: 100%;
+  opacity: 0.6;
+}
+
+.poolPreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-lg;
+}
+
+.poolCircle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-bold;
+  color: white;
+  opacity: 0.7;
+}
+
+.poolStat {
+  color: $color-text-secondary;
+  font-size: $font-size-md;
+}
+
+.metricsPreview {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  width: 100%;
+}
+
+.metricItem {
+  padding: $spacing-md;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: $border-radius-md;
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+}
+
+.loggersPreview {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  width: 100%;
+}
+
+.loggerItem {
+  padding: $spacing-md;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: $border-radius-md;
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+}
+
+.appsPreview {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  width: 100%;
+}
+
+.appItem {
+  padding: $spacing-md;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: $border-radius-md;
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+}
+
+.info {
+  h3 {
+    margin-bottom: $spacing-md;
+    font-size: $font-size-2xl;
+  }
+
+  p {
+    font-size: $font-size-md;
+    color: $color-text-secondary;
+    margin: 0;
+  }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-2xl;
+  margin-top: $spacing-2xl;
+}
+
+.btn {
+  width: 44px;
+  height: 44px;
+  border-radius: $border-radius-lg;
+  border: 1px solid $color-border;
+  background: $color-dark-tertiary;
+  color: $color-text-primary;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-base;
+
+  &:hover {
+    border-color: $color-primary;
+    color: $color-primary;
+  }
+}
+
+.dots {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: $color-dark-tertiary;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover {
+    background: $color-primary;
+  }
+
+  &.active {
+    background: $color-primary;
+    width: 28px;
+    border-radius: 5px;
+  }
+}

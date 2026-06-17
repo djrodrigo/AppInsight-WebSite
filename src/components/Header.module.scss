@@ -1,0 +1,84 @@
+@use '../index.scss' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(180deg, $color-dark 0%, rgba($color-dark, 0.95) 100%);
+  border-bottom: 1px solid $color-border;
+  backdrop-filter: blur(10px);
+  padding: $spacing-md 0;
+
+  .container {
+    padding: 0 $spacing-lg;
+
+    @media (max-width: 768px) {
+      padding: 0 $spacing-md;
+    }
+  }
+}
+
+.logo {
+  h2 {
+    background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: $spacing-2xl;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: $color-dark;
+    border-bottom: 1px solid $color-border;
+    padding: $spacing-xl $spacing-lg;
+    gap: $spacing-lg;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $transition-base;
+
+    &--open {
+      max-height: 400px;
+    }
+  }
+}
+
+.navLink {
+  color: $color-text-secondary;
+  font-weight: $font-weight-medium;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: $color-text-primary;
+  cursor: pointer;
+  padding: $spacing-sm;
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,96 @@
+@use '../../index.scss' as *;
+
+.testimonials {
+  background: linear-gradient(180deg, $color-dark-secondary 0%, $color-dark 100%);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $spacing-3xl;
+
+  h2 {
+    margin-bottom: $spacing-md;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    max-width: 600px;
+    margin: 0 auto;
+    color: $color-text-secondary;
+  }
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-2xl;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.testimonialCard {
+  background: $color-dark-secondary;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-xl;
+  padding: $spacing-2xl;
+  transition: all $transition-base;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+
+  &:hover {
+    border-color: $color-primary;
+    background: $color-dark-tertiary;
+    box-shadow: 0 8px 32px rgba($color-primary, 0.1);
+  }
+}
+
+.stars {
+  display: flex;
+  gap: $spacing-xs;
+
+  svg {
+    color: #ffa500;
+  }
+}
+
+.quote {
+  margin: 0;
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: $spacing-lg;
+  border-top: 1px solid $color-border;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.authorName {
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  font-size: $font-size-md;
+}
+
+.authorRole {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.company {
+  font-size: $font-size-sm;
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+}

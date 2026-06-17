@@ -1,0 +1,163 @@
+@use '../../index.scss' as *;
+
+.pricing {
+  background: linear-gradient(180deg, $color-dark 0%, $color-dark-secondary 100%);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $spacing-3xl;
+
+  h2 {
+    margin-bottom: $spacing-md;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    max-width: 600px;
+    margin: 0 auto;
+    color: $color-text-secondary;
+  }
+}
+
+.pricingCard {
+  max-width: 500px;
+  margin: 0 auto $spacing-3xl;
+  position: relative;
+  background: $color-dark-secondary;
+  border: 2px solid $color-border;
+  border-radius: $border-radius-2xl;
+  overflow: hidden;
+  transition: all $transition-base;
+
+  &:hover {
+    border-color: $color-primary;
+    box-shadow: 0 12px 48px rgba($color-primary, 0.2);
+  }
+}
+
+.cardContent {
+  padding: $spacing-3xl;
+  position: relative;
+  z-index: 2;
+}
+
+.planHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-lg;
+
+  h3 {
+    margin: 0;
+    font-size: $font-size-2xl;
+  }
+}
+
+.badge {
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+  color: white;
+  padding: $spacing-xs $spacing-md;
+  border-radius: $border-radius-md;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+}
+
+.pricing_ {
+  margin-bottom: $spacing-2xl;
+  padding-bottom: $spacing-2xl;
+  border-bottom: 1px solid $color-border;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.currency {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+}
+
+.amount {
+  font-size: $font-size-5xl;
+  font-weight: $font-weight-bold;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.period {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+}
+
+.priceDesc {
+  margin: 0;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.features {
+  margin-top: $spacing-2xl;
+
+  h4 {
+    margin: 0 0 $spacing-lg 0;
+    font-size: $font-size-lg;
+  }
+}
+
+.featuresList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  color: $color-text-secondary;
+  font-size: $font-size-md;
+
+  svg {
+    color: $color-accent-success;
+    flex-shrink: 0;
+  }
+}
+
+.highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, $color-primary, transparent);
+}
+
+.faq_ {
+  text-align: center;
+  padding: $spacing-2xl;
+  background: $color-dark-secondary;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-xl;
+
+  h4 {
+    margin: 0 0 $spacing-md 0;
+    font-size: $font-size-lg;
+  }
+
+  p {
+    margin: 0;
+    color: $color-text-secondary;
+  }
+
+  a {
+    color: $color-primary;
+    font-weight: $font-weight-semibold;
+  }
+}
