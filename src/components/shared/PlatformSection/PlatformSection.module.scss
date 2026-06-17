@@ -1,6 +1,6 @@
-@use '../../index.scss' as *;
+@use '../../../index.scss' as *;
 
-.features {
+.platform {
   background: linear-gradient(180deg, $color-dark-secondary 0%, $color-dark 100%);
 }
 
@@ -20,9 +20,9 @@
   }
 }
 
-.grid {
+.platformsGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: $spacing-2xl;
 
   @media (max-width: 1024px) {
@@ -31,19 +31,19 @@
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: $spacing-lg;
   }
 }
 
-.card {
+.platformCard {
   background: $color-dark-secondary;
   border: 1px solid $color-border;
   border-radius: $border-radius-xl;
   padding: $spacing-2xl;
-  transition: all $transition-base;
   display: flex;
   flex-direction: column;
-  gap: $spacing-md;
+  align-items: center;
+  text-align: center;
+  transition: all $transition-base;
 
   &:hover {
     border-color: $color-primary;
@@ -53,20 +53,20 @@
   }
 
   h3 {
-    font-size: $font-size-lg;
-    margin: 0;
+    margin: $spacing-lg 0 $spacing-sm;
+    font-size: $font-size-2xl;
   }
 
   p {
-    margin: 0;
+    margin: 0 0 $spacing-md;
     font-size: $font-size-md;
     color: $color-text-secondary;
   }
 }
 
 .iconWrapper {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   background: linear-gradient(135deg, rgba($color-primary, 0.2) 0%, rgba($color-primary, 0.05) 100%);
   border: 1px solid rgba($color-primary, 0.3);
   border-radius: $border-radius-lg;
@@ -74,10 +74,15 @@
   align-items: center;
   justify-content: center;
   color: $color-primary;
-  font-size: 24px;
 
   svg {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
   }
+}
+
+.version {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  margin-bottom: $spacing-lg;
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import logoImg from '../../assets/images/AppInsight-Logo.png'
 import styles from './Header.module.scss'
 
 export default function Header() {
@@ -16,6 +17,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className="container flex flex--between">
         <div className={styles.logo}>
+          <img src={logoImg} alt="AppInsight Logo" className={styles.logoImg} />
           <h2>AppInsight</h2>
         </div>
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Play } from 'lucide-react'
-import AppMockup from '../AppMockup'
+import AppMockup from '../../AppMockup/AppMockup'
 import styles from './HeroSection.module.scss'
 
 export default function HeroSection() {
